@@ -3,16 +3,16 @@
 # DEV
 推荐使用VS2017进行开发。
 
-1）下载下来代码
+1)下载下来代码
 ```bash
 git clone xxx --recursive
 ```
 
-2) 可以自动安装所需的开发环境 `Visual Studio 2010 Tools for Office Runtime`。
+2)可以自动安装所需的开发环境 `Visual Studio 2010 Tools for Office Runtime`。
 或者自行下载[Visual Studio 2010 Tools for Office Runtime](https://link.zhihu.com/?target=https%3A//www.microsoft.com/en-us/download/details.aspx%3Fid%3D48217)
 
-3） 安装到office word 后，可以在加载项中看到LaTeXIO，并进行如下设置：
-![](doc/asserts/setting.png)
+3)安装到office word 后，可以在加载项中看到LaTeXIO，并进行如下设置：
+![](doc/asserts/setting.jpg)
 
 
 # 问题与解决
@@ -25,7 +25,7 @@ git clone xxx --recursive
     相应的调试位置。
   
   备注：如果出现LaTeX被禁用的，类似下图中第一个方框中出现了LaTeXIO，则可以在第二个方框中的操作下，取消`LaTeXIO。dll`被禁用即可。
-  ![](doc/asserts/was_forbaden_condiction.png)
+  ![](doc/asserts/was_forbaden_condiction.jpg)
   <br/> <br/>
 
 * office 365 上面是灰色的，无法使用。 
