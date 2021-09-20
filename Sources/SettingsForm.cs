@@ -25,7 +25,12 @@ namespace LaTeXIO
         public SettingsForm()
         {
             InitializeComponent();
-            string tmpPath = System.Environment.GetEnvironmentVariable("TEMP");
+
+            // 初始化临时目录的设置
+            string tmpPath = System.IO.Path.GetTempPath();  // System.Environment.GetEnvironmentVariable("TEMP"); 这样得到的是错的
+            this.tb_wkdir.Text = tmpPath;
+
+     
             //防止终止该窗口
             this.FormClosing += delegate (object sender, FormClosingEventArgs e)
             {

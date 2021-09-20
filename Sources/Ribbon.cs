@@ -134,9 +134,12 @@ namespace LaTeXIO
         private void SettingsBox_Intl(bool form_terminated)
         {
             //读取配置
-            if (form_terminated) settingsBox = new SettingsForm();
+            if (form_terminated)
+                settingsBox = new SettingsForm();
+
             settingsBox.FormClosed += ((formObj, ea) => SettingsBox_Intl(true)); //防止设置窗口中止
-            settingsBox.generChangeEventHandler += ((prg_params, Evr) => check_programs()); //即TeX程序配置
+            settingsBox.generChangeEventHandler += ((prg_params, Evr) => check_programs()); //即TeX程序配置'
+
             //显示标签与否
             btn_insMath.ShowLabel = settingsBox.showLabel;
             btn_insChemReact.ShowLabel = settingsBox.showLabel;

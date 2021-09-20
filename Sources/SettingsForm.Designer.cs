@@ -369,7 +369,7 @@ namespace LaTeXIO
             this.tb_wkdir.Name = "tb_wkdir";
             this.tb_wkdir.Size = new System.Drawing.Size(219, 25);
             this.tb_wkdir.TabIndex = 9;
-            this.tb_wkdir.Text = "C:\\Users\\benter\\AppData\\Local\\Temp";
+            this.tb_wkdir.Text = "C:\\";
             this.tb_wkdir.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btn_clean_cache

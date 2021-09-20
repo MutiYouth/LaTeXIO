@@ -1,4 +1,4 @@
-﻿namespace LaTeXIO
+namespace LaTeXIO
 {
     partial class Ribbon : Microsoft.Office.Tools.Ribbon.RibbonBase
     {
@@ -50,9 +50,9 @@
             this.btn_baselineDn = this.Factory.CreateRibbonButton();
             this.btn_baselineRt = this.Factory.CreateRibbonButton();
             this.separator5 = this.Factory.CreateRibbonSeparator();
-            this.lb_gen_tip = this.Factory.CreateRibbonLabel();
             this.btn_settings = this.Factory.CreateRibbonButton();
             this.btn_about = this.Factory.CreateRibbonButton();
+            this.lb_gen_tip = this.Factory.CreateRibbonLabel();
             this.tab_LaTeXIO = this.Factory.CreateRibbonTab();
             this.tab1.SuspendLayout();
             this.LaTeXIO.SuspendLayout();
@@ -204,11 +204,6 @@
             // 
             this.separator5.Name = "separator5";
             // 
-            // lb_gen_tip
-            // 
-            this.lb_gen_tip.Label = "genTip";
-            this.lb_gen_tip.Name = "lb_gen_tip";
-            // 
             // btn_settings
             // 
             this.btn_settings.Image = global::LaTeXIO.Properties.Resources.Button_Settings;
@@ -224,6 +219,11 @@
             this.btn_about.Name = "btn_about";
             this.btn_about.ShowImage = true;
             this.btn_about.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btn_about_Click);
+            // 
+            // lb_gen_tip
+            // 
+            this.lb_gen_tip.Label = "genTip";
+            this.lb_gen_tip.Name = "lb_gen_tip";
             // 
             // tab_LaTeXIO
             // 

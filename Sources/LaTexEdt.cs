@@ -1,4 +1,4 @@
-﻿using Microsoft.Office.Core;
+using Microsoft.Office.Core;
 using Microsoft.Office.Interop.Word;
 using System;
 using System.Diagnostics;
@@ -50,13 +50,24 @@ namespace LaTeXIO
         private void btn_gen_Click(object sender, EventArgs e)
         {
             btn_gen.Enabled = false; //防止按多次
+
             Cursor = Cursors.AppStarting;
             logsBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            logsBox.Clear(); //清空日志框，防溢出
+            logsBox.Clear();  // 清空日志框，防溢出
             logsBox.ClearUndo();
+
             Microsoft.Office.Interop.Word.Document ThisDoc = Globals.ThisAddIn.Application.ActiveDocument;
             string occupied_id = "param_" + Guid.NewGuid().ToString();
-            if (ThisDoc == null || ThisDoc.ReadOnly) return;
+            if (ThisDoc == null || ThisDoc.ReadOnly){
+                logsBox.Text += "\n Error, activeDocument is null.";
+                return;
+            }
+            if (!System.IO.Directory.Exists(Ribbon.settingsBox.workPath)){
+                logsBox.Text += "\n WorkPath not exist. " + Ribbon.settingsBox.workPath;
+                return;
+            }
+
+
             string workPath = Ribbon.settingsBox.workPath + "\\LaTeXIO";
             latex_style_gen(workPath);
             string TexFile = workPath + "\\" + occupied_id + ".tex";
