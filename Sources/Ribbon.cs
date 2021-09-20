@@ -1,10 +1,10 @@
-﻿using Microsoft.Office.Interop.Word;
+using Microsoft.Office.Interop.Word;
 using Microsoft.Office.Tools.Ribbon;
 using System;
 using System.IO;
-using WordxTex.Properties;
+using LaTeXIO.Properties;
 
-namespace WordxTex
+namespace LaTeXIO
 {
     public partial class Ribbon
     {
@@ -44,7 +44,7 @@ namespace WordxTex
             if (SelectedObj.Count == 0)
                 return;
             InlineShape SelectedObjFirst = SelectedObj[1];
-            if (!SelectedObjFirst.AlternativeText.Contains("WordxTex_TexContent"))
+            if (!SelectedObjFirst.AlternativeText.Contains("LaTeXIO_TexContent"))
                 return;
             LaTexEdt CodeEditor = new LaTexEdt(false, SelectedObjFirst.AlternativeText, 0, 0);
             CodeEditor.ShowDialog();
@@ -125,7 +125,7 @@ namespace WordxTex
             if (SelectedObj.Count == 0)
                 return;
             InlineShape SelectedObjFirst = SelectedObj[1];
-            if (!SelectedObjFirst.AlternativeText.Contains("WordxTex_TexContent"))
+            if (!SelectedObjFirst.AlternativeText.Contains("LaTeXIO_TexContent"))
                 return;
             LaTexEdt CodeEditor = new LaTexEdt(false, SelectedObjFirst.AlternativeText, 0, 0);
             CodeEditor.ShowDialog();
@@ -165,7 +165,7 @@ namespace WordxTex
         {
             try
             {
-                if (Sel.InlineShapes[1].AlternativeText.Contains("WordxTex_TexContent")) btn_edit.Enabled = true;
+                if (Sel.InlineShapes[1].AlternativeText.Contains("LaTeXIO_TexContent")) btn_edit.Enabled = true;
             }
             catch (System.Exception)
             {
@@ -188,13 +188,12 @@ namespace WordxTex
         private void btn_about_Click(object sender, RibbonControlEventArgs e) => new AboutBox().ShowDialog();
 
         private void check_programs()
-        {
-            if (
-                (!ExistsOnPath(get_param_value(settingsBox.program_exec_params, "complier") + ".exe")) ||
-                (!ExistsOnPath(get_param_value(settingsBox.program_exec_params, "grapher") + ".exe"))
-                )
-            {
-                lb_gen_tip.Label = "Fatal: Programs invalid!";
+        {   
+            String str_compiler_path = get_param_value(settingsBox.program_exec_params, "complier") + ".exe";
+            String str_grapher_path = get_param_value(settingsBox.program_exec_params, "grapher") + ".exe";
+
+            if (!ExistsOnPath(str_compiler_path) || !ExistsOnPath(str_grapher_path)){
+                lb_gen_tip.Label = "Fatal: Programs of compiler and grapher can not find. invalid!";
                 btn_insertTex.Enabled = false;
                 btn_insChemStruct.Enabled = false;
                 btn_insMath.Enabled = false;
@@ -267,7 +266,7 @@ namespace WordxTex
             {
                 TexObjInline = TexObj.InlineShapes[1];
                 if_TexObject = (TexObjInline.Type != WdInlineShapeType.wdInlineShapePicture);
-                if_TexObject = (if_TexObject && TexObjInline.AlternativeText.Contains("WordxTex_TexContent"));
+                if_TexObject = (if_TexObject && TexObjInline.AlternativeText.Contains("LaTeXIO_TexContent"));
             }
             else
             {
@@ -284,7 +283,7 @@ namespace WordxTex
                 TexObjInline_start = TexObj.Start;
                 TexObjInline = TexObj.InlineShapes[1];
                 if_TexObject = (TexObjInline.Type != WdInlineShapeType.wdInlineShapePicture);
-                if_TexObject = (if_TexObject && TexObjInline.AlternativeText.Contains("WordxTex_TexContent"));
+                if_TexObject = (if_TexObject && TexObjInline.AlternativeText.Contains("LaTeXIO_TexContent"));
             };
             if (if_TexObject)
             {
@@ -300,7 +299,7 @@ namespace WordxTex
 
         private void btn_insertTex_Click(object sender, RibbonControlEventArgs e)
         {
-            LaTexEdt CodeEditor = new LaTexEdt(false, "%!WordxTex_TexContent DO NOT DELETE THIS LINE\n", 46, 46);
+            LaTexEdt CodeEditor = new LaTexEdt(false, "%!LaTeXIO_TexContent DO NOT DELETE THIS LINE\n", 46, 46);
             CodeEditor.Show();
         }
 

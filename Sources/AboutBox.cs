@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace WordxTex
+namespace LaTeXIO
 {
     partial class AboutBox : Form
     {

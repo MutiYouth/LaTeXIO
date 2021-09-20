@@ -1,4 +1,4 @@
-﻿namespace WordxTex
+﻿namespace LaTeXIO
 {
     partial class LaTexEdt
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WordxTex.Properties {
+namespace LaTeXIO.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace WordxTex.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WordxTex.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LaTeXIO.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -181,8 +181,8 @@ namespace WordxTex.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to \renewcommand{\normalsize}{\fontsize{%%WordxTex_Font_Symbol}{%%WordxTex_Font_Symbol}\selectfont}
-        ///%%WordxTex_Equation_Font_Symbal
+        ///   Looks up a localized string similar to \renewcommand{\normalsize}{\fontsize{%%LaTeXIO_Font_Symbol}{%%LaTeXIO_Font_Symbol}\selectfont}
+        ///%%LaTeXIO_Equation_Font_Symbal
         ///\DeclareMathSizes{8}{8}{7}{5}
         ///\DeclareMathSizes{9}{9}{7}{5}
         ///\DeclareMathSizes{10}{10}{8}{5}
@@ -203,7 +203,7 @@ namespace WordxTex.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to %!WordxTex_TexContent DO NOT DELETE THIS LINE
+        ///   Looks up a localized string similar to %!LaTeXIO_TexContent DO NOT DELETE THIS LINE
         ///\documentclass{minimal}
         ///%%param.sty for font adjustment.
         ///\usepackage{param}
@@ -223,7 +223,7 @@ namespace WordxTex.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to %!WordxTex_TexContent DO NOT DELETE THIS LINE
+        ///   Looks up a localized string similar to %!LaTeXIO_TexContent DO NOT DELETE THIS LINE
         ///\documentclass{standalone}
         ///%%param.sty for font adjustment.
         ///\usepackage{param}
@@ -243,7 +243,7 @@ namespace WordxTex.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to %!WordxTex_TexContent DO NOT DELETE THIS LINE
+        ///   Looks up a localized string similar to %!LaTeXIO_TexContent DO NOT DELETE THIS LINE
         ///\documentclass{standalone}
         ///%%param.sty for font adjustment.
         ///\usepackage{param}
@@ -265,7 +265,7 @@ namespace WordxTex.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to %!WordxTex_TexContent DO NOT DELETE THIS LINE
+        ///   Looks up a localized string similar to %!LaTeXIO_TexContent DO NOT DELETE THIS LINE
         ///\documentclass{minimal}
         ///%%param.sty for font adjustment.
         ///\usepackage{param}
@@ -285,7 +285,7 @@ namespace WordxTex.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to %!WordxTex_TexContent DO NOT DELETE THIS LINE
+        ///   Looks up a localized string similar to %!LaTeXIO_TexContent DO NOT DELETE THIS LINE
         ///\documentclass{standalone}
         ///%%param.sty for font adjustment.
         ///\usepackage{param}

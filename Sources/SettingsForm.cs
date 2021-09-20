@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace WordxTex
+namespace LaTeXIO
 {
     public partial class SettingsForm : Form
     {
@@ -16,7 +16,7 @@ namespace WordxTex
 
         System.Text.StringBuilder tempIniValue = new System.Text.StringBuilder(255);
 
-        string iniFile = System.Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\.WordxTex.ini";
+        string iniFile = System.Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\.LaTeXIO.ini";
 
         public event EventHandler generChangeEventHandler;
         public event EventHandler maxRunTimePerProgramChangeEventHandler;
@@ -152,11 +152,11 @@ namespace WordxTex
 
         private void btn_clean_cache_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Delete all files in: " + tb_wkdir.Text + "\\WordxTex", "confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Delete all files in: " + tb_wkdir.Text + "\\LaTeXIO", "confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 try
                 {
-                    System.Collections.Generic.List<string> FileList = Directory.GetFiles(tb_wkdir.Text + "\\WordxTex").ToList();
+                    System.Collections.Generic.List<string> FileList = Directory.GetFiles(tb_wkdir.Text + "\\LaTeXIO").ToList();
                     for (int i = 0; i < FileList.ToList().Count; i++) File.Delete(FileList[i]);
                 }
                 catch (IOException)

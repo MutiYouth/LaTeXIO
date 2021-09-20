@@ -1,4 +1,4 @@
-﻿namespace WordxTex
+namespace LaTeXIO
 {
     partial class SettingsForm
     {
@@ -73,7 +73,8 @@
             // ctb_compiler
             // 
             this.ctb_compiler.DroppedDown = false;
-            this.ctb_compiler.Location = new System.Drawing.Point(63, 12);
+            this.ctb_compiler.Location = new System.Drawing.Point(84, 15);
+            this.ctb_compiler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ctb_compiler.Name = "ctb_compiler";
             comboTreeNode1.Expanded = true;
             comboTreeNode1.ForeColor = System.Drawing.Color.Empty;
@@ -145,14 +146,15 @@
             this.ctb_compiler.Nodes.Add(comboTreeNode6);
             this.ctb_compiler.Path = "xeLaTeX\\.tex-xeLaTeX->.xdv";
             this.ctb_compiler.SelectedNode = comboTreeNode2;
-            this.ctb_compiler.Size = new System.Drawing.Size(209, 23);
+            this.ctb_compiler.Size = new System.Drawing.Size(279, 29);
             this.ctb_compiler.TabIndex = 0;
             this.ctb_compiler.Click += new System.EventHandler(this.ctb_compiler_Click);
             // 
             // ctb_graphbox
             // 
             this.ctb_graphbox.DroppedDown = false;
-            this.ctb_graphbox.Location = new System.Drawing.Point(63, 41);
+            this.ctb_graphbox.Location = new System.Drawing.Point(84, 51);
+            this.ctb_graphbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ctb_graphbox.Name = "ctb_graphbox";
             comboTreeNode9.Expanded = true;
             comboTreeNode9.ForeColor = System.Drawing.Color.Empty;
@@ -223,32 +225,35 @@
             this.ctb_graphbox.Nodes.Add(comboTreeNode12);
             this.ctb_graphbox.Path = "dvisvgm\\[.dvi,.xdv]-dvisvgm->.svg";
             this.ctb_graphbox.SelectedNode = comboTreeNode10;
-            this.ctb_graphbox.Size = new System.Drawing.Size(209, 23);
+            this.ctb_graphbox.Size = new System.Drawing.Size(279, 29);
             this.ctb_graphbox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 47);
+            this.label1.Location = new System.Drawing.Point(53, 59);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 12);
+            this.label1.Size = new System.Drawing.Size(23, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "->";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1, 17);
+            this.label2.Location = new System.Drawing.Point(1, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 12);
+            this.label2.Size = new System.Drawing.Size(79, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Compiler:";
             // 
             // btn_hide
             // 
-            this.btn_hide.Location = new System.Drawing.Point(197, 210);
+            this.btn_hide.Location = new System.Drawing.Point(263, 262);
+            this.btn_hide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_hide.Name = "btn_hide";
-            this.btn_hide.Size = new System.Drawing.Size(75, 23);
+            this.btn_hide.Size = new System.Drawing.Size(100, 29);
             this.btn_hide.TabIndex = 4;
             this.btn_hide.Text = "hide";
             this.btn_hide.UseVisualStyleBackColor = true;
@@ -257,9 +262,10 @@
             // chb_show_fl
             // 
             this.chb_show_fl.AutoSize = true;
-            this.chb_show_fl.Location = new System.Drawing.Point(3, 188);
+            this.chb_show_fl.Location = new System.Drawing.Point(4, 235);
+            this.chb_show_fl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chb_show_fl.Name = "chb_show_fl";
-            this.chb_show_fl.Size = new System.Drawing.Size(138, 16);
+            this.chb_show_fl.Size = new System.Drawing.Size(181, 19);
             this.chb_show_fl.TabIndex = 5;
             this.chb_show_fl.Text = "Show function label";
             this.chb_show_fl.UseVisualStyleBackColor = true;
@@ -268,7 +274,8 @@
             // cb_fonts
             // 
             this.cb_fonts.DroppedDown = false;
-            this.cb_fonts.Location = new System.Drawing.Point(63, 77);
+            this.cb_fonts.Location = new System.Drawing.Point(84, 96);
+            this.cb_fonts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_fonts.Name = "cb_fonts";
             comboTreeNode18.Expanded = true;
             comboTreeNode18.ForeColor = System.Drawing.Color.Empty;
@@ -307,22 +314,24 @@
             this.cb_fonts.Nodes.Add(comboTreeNode22);
             this.cb_fonts.Path = "default";
             this.cb_fonts.SelectedNode = comboTreeNode18;
-            this.cb_fonts.Size = new System.Drawing.Size(209, 23);
+            this.cb_fonts.Size = new System.Drawing.Size(279, 29);
             this.cb_fonts.TabIndex = 6;
             this.cb_fonts.SelectedNodeChanged += new System.EventHandler(this.cb_fonts_Change);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 82);
+            this.label3.Location = new System.Drawing.Point(25, 102);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "Fonts:";
             // 
             // sb_execPerPrgTime
             // 
-            this.sb_execPerPrgTime.Location = new System.Drawing.Point(210, 160);
+            this.sb_execPerPrgTime.Location = new System.Drawing.Point(280, 200);
+            this.sb_execPerPrgTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sb_execPerPrgTime.Maximum = new decimal(new int[] {
             360,
             0,
@@ -334,7 +343,7 @@
             0,
             0});
             this.sb_execPerPrgTime.Name = "sb_execPerPrgTime";
-            this.sb_execPerPrgTime.Size = new System.Drawing.Size(62, 21);
+            this.sb_execPerPrgTime.Size = new System.Drawing.Size(83, 25);
             this.sb_execPerPrgTime.TabIndex = 8;
             this.sb_execPerPrgTime.Value = new decimal(new int[] {
             30,
@@ -346,26 +355,29 @@
             // execTime
             // 
             this.execTime.AutoSize = true;
-            this.execTime.Location = new System.Drawing.Point(2, 163);
+            this.execTime.Location = new System.Drawing.Point(3, 204);
+            this.execTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.execTime.Name = "execTime";
-            this.execTime.Size = new System.Drawing.Size(197, 12);
+            this.execTime.Size = new System.Drawing.Size(263, 15);
             this.execTime.TabIndex = 7;
             this.execTime.Text = "Max wait time(per program, sec):";
             // 
             // tb_wkdir
             // 
-            this.tb_wkdir.Location = new System.Drawing.Point(63, 106);
+            this.tb_wkdir.Location = new System.Drawing.Point(84, 132);
+            this.tb_wkdir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_wkdir.Name = "tb_wkdir";
-            this.tb_wkdir.Size = new System.Drawing.Size(165, 21);
+            this.tb_wkdir.Size = new System.Drawing.Size(219, 25);
             this.tb_wkdir.TabIndex = 9;
             this.tb_wkdir.Text = "C:\\Users\\benter\\AppData\\Local\\Temp";
             this.tb_wkdir.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btn_clean_cache
             // 
-            this.btn_clean_cache.Location = new System.Drawing.Point(153, 131);
+            this.btn_clean_cache.Location = new System.Drawing.Point(204, 164);
+            this.btn_clean_cache.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_clean_cache.Name = "btn_clean_cache";
-            this.btn_clean_cache.Size = new System.Drawing.Size(119, 23);
+            this.btn_clean_cache.Size = new System.Drawing.Size(159, 29);
             this.btn_clean_cache.TabIndex = 10;
             this.btn_clean_cache.Text = "Clean Files";
             this.btn_clean_cache.UseVisualStyleBackColor = true;
@@ -373,10 +385,11 @@
             // 
             // btn_wkDir_select
             // 
-            this.btn_wkDir_select.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_wkDir_select.Location = new System.Drawing.Point(234, 106);
+            this.btn_wkDir_select.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_wkDir_select.Location = new System.Drawing.Point(312, 132);
+            this.btn_wkDir_select.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_wkDir_select.Name = "btn_wkDir_select";
-            this.btn_wkDir_select.Size = new System.Drawing.Size(38, 23);
+            this.btn_wkDir_select.Size = new System.Drawing.Size(51, 29);
             this.btn_wkDir_select.TabIndex = 11;
             this.btn_wkDir_select.Text = "...";
             this.btn_wkDir_select.UseVisualStyleBackColor = true;
@@ -387,9 +400,10 @@
             this.ckb_autoclean.AutoSize = true;
             this.ckb_autoclean.Checked = true;
             this.ckb_autoclean.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_autoclean.Location = new System.Drawing.Point(63, 135);
+            this.ckb_autoclean.Location = new System.Drawing.Point(84, 169);
+            this.ckb_autoclean.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ckb_autoclean.Name = "ckb_autoclean";
-            this.ckb_autoclean.Size = new System.Drawing.Size(84, 16);
+            this.ckb_autoclean.Size = new System.Drawing.Size(109, 19);
             this.ckb_autoclean.TabIndex = 12;
             this.ckb_autoclean.Text = "Auto clean";
             this.ckb_autoclean.UseVisualStyleBackColor = true;
@@ -398,17 +412,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1, 110);
+            this.label4.Location = new System.Drawing.Point(1, 138);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 12);
+            this.label4.Size = new System.Drawing.Size(79, 15);
             this.label4.TabIndex = 13;
             this.label4.Text = "Work Dir:";
             // 
             // SettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 236);
+            this.ClientSize = new System.Drawing.Size(379, 295);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ckb_autoclean);
             this.Controls.Add(this.btn_wkDir_select);
@@ -425,12 +440,13 @@
             this.Controls.Add(this.ctb_graphbox);
             this.Controls.Add(this.ctb_compiler);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SettingsForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "WordxTex - Settings";
+            this.Text = "LaTeXIO - Settings";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.SettingsBox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sb_execPerPrgTime)).EndInit();

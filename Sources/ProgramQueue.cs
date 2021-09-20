@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Timers;
 
-namespace WordxTex.wTModule
+namespace LaTeXIO.wTModule
 {
     public class ProgramQueue : System.Object
     {

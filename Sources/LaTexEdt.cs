@@ -8,13 +8,13 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using WordxTex.Properties;
+using LaTeXIO.Properties;
 
-namespace WordxTex
+namespace LaTeXIO
 {
     public partial class LaTexEdt : Form
     {
-        public string workPath = Ribbon.settingsBox.workPath + "\\WordxTex";
+        public string workPath = Ribbon.settingsBox.workPath + "\\LaTeXIO";
         public LaTexEdt(bool BatchMode, string Code, int caretStart, int caretEnd)
         {
             InitializeComponent();
@@ -57,7 +57,7 @@ namespace WordxTex
             Microsoft.Office.Interop.Word.Document ThisDoc = Globals.ThisAddIn.Application.ActiveDocument;
             string occupied_id = "param_" + Guid.NewGuid().ToString();
             if (ThisDoc == null || ThisDoc.ReadOnly) return;
-            string workPath = Ribbon.settingsBox.workPath + "\\WordxTex";
+            string workPath = Ribbon.settingsBox.workPath + "\\LaTeXIO";
             latex_style_gen(workPath);
             string TexFile = workPath + "\\" + occupied_id + ".tex";
             __texContent = texCodeBox.Text;
@@ -91,7 +91,7 @@ namespace WordxTex
 
             latex_style_gen(workPath); //生成自动模板
             //准备命令队列
-            WordxTex.wTModule.ProgramQueue CpQueue = new WordxTex.wTModule.ProgramQueue(
+            LaTeXIO.wTModule.ProgramQueue CpQueue = new LaTeXIO.wTModule.ProgramQueue(
                 new string[] { Complier, Grapher },
                 new string[] { Complier_Args, Grapher_Args },
                 Ribbon.settingsBox.maxRunTimePerProgram);
@@ -293,8 +293,8 @@ namespace WordxTex
             {
                 string fullStyle = Resources.tex_fontsize_style;
                 string texFontSize = ThisDoc.Application.Selection.Font.Size.ToString(); //当前应用设置的字体大小
-                fullStyle = fullStyle.Replace("%%WordxTex_Font_Symbol", texFontSize); //将模板内的通配符替换为字体大小
-                fullStyle = fullStyle.Replace("%%WordxTex_Equation_Font_Symbal", Ribbon.settingsBox.fontFx); //替换为所选字体样式
+                fullStyle = fullStyle.Replace("%%LaTeXIO_Font_Symbol", texFontSize); //将模板内的通配符替换为字体大小
+                fullStyle = fullStyle.Replace("%%LaTeXIO_Equation_Font_Symbal", Ribbon.settingsBox.fontFx); //替换为所选字体样式
                 fullStyle = fullStyle.Replace("%%cMode", colorMode);
                 fullStyle = fullStyle.Replace("%%cParam", colorParam);
                 byte[] TexContent = System.Text.Encoding.Default.GetBytes(fullStyle);
@@ -318,7 +318,7 @@ namespace WordxTex
                 return;
             if (SelectedObj.Count == 0)
                 return;
-            if (!SelectedObjFirst.AlternativeText.Contains("WordxTex_TexContent"))
+            if (!SelectedObjFirst.AlternativeText.Contains("LaTeXIO_TexContent"))
                 return;
             texCodeBox.Clear();
             texCodeBox.Text = SelectedObjFirst.AlternativeText;

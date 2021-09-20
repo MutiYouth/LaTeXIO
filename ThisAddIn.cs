@@ -1,4 +1,4 @@
-﻿namespace WordxTex
+﻿namespace LaTeXIO
 {
     public partial class ThisAddIn
     {
