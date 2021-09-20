@@ -1,4 +1,4 @@
-LaTeXIO is forked from [LaTeXIO](https://github.com/rylandev/LaTeXIO) 。 
+LaTeXIO is forked from [WordxTex](https://github.com/rylandev/WordxTex) 。 
 
 # dev
 推荐使用VS2017进行开发。
